@@ -1,0 +1,22 @@
+.profile {
+    border-style: double;
+    border-color: black;
+    border-width: 2px;
+    width: 400px;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+.dark {
+    background-color: black;
+    color: white;
+}
+.btn{
+    background-color: darkorange;
+    font-size: large;
+    font-style: oblique;
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    margin: 15px auto;
+}
