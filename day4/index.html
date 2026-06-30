@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>WEATHER DASHBOARD</h1>
+    <div class="card">
+        <form class="weatherform">
+        <input type="text" class="cityinput" placeholder="ENTER CITY">
+        <button type="submit">🔎</button>
+
+    </form>
+    <div class="recentSearches">
+    </div>
+        <div class="currentweather">
+            <div class="left">
+                <h2 class="citydisplay"></h2>
+                <p class="datedisplay"></p>
+                <div class="tempsection">
+                    <img class="weatherIcon">
+                    <h1 class="tempDisplay"></h1>
+                    
+                </div>
+                <p class="descDisplay">overcast clouds</p>
+
+            </div>
+            <div class="right">
+                <div class="infobox">
+                    <h3>Humidity</h3>
+                    <p class="humidityDisplay"></p>
+                </div>
+                <div class="infobox">
+                    <h3>wind</h3>
+                    <p class="windDisplay"></p>           
+                </div>
+
+            </div>
+        </div>
+        <h2>5 day forecast</h2>
+        <div class="forecastContainer">
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
