@@ -1,0 +1,14 @@
+.hero{
+    padding:30px 60px;
+    margin-left: 100px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-top:20px;
+    font-weight:900;
+}
+.home{
+    font-size:14px;
+    color:#555;
+}
