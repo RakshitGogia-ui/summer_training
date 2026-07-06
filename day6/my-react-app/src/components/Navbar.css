@@ -50,3 +50,56 @@
 .mainmwnu :hover{
     cursor: pointer;
 }
+.nav-item{
+    position:relative;
+    cursor:pointer;
+    padding:20px 0;
+}
+.dropdown{
+    position:absolute;
+    top:100%;
+    left:-100px;
+
+    width:900px;
+
+    background:white;
+
+    display:flex;
+    gap:70px;
+
+    padding:30px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.nav-item:hover .dropdown{
+    opacity:1;
+    visibility:visible;
+}
+
+.column{
+    min-width:170px;
+}
+
+.column h4{
+    margin-bottom:15px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.column p{
+    margin:10px 0;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.column p:hover{
+    text-decoration:underline;
+}
