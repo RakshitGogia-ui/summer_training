@@ -1,9 +1,9 @@
 import "./Resultbar.css";
 
-function Resultbar() {
+function Resultbar(props)  {
   return (
     <div className="resultsBar">
-      <p>1977 results</p>
+      <p>{props.totalProducts} results</p>
 
       <button className="filterBtn">
         Filter & Sort

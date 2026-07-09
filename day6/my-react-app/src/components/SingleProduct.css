@@ -1,0 +1,22 @@
+.singleProduct{
+    width: 400px;
+    margin: 50px auto;
+    padding:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    text-align:center;
+}
+
+.singleProduct img{
+    width:220px;
+    height:220px;
+    object-fit:contain;
+}
+
+.singleProduct h2{
+    margin:10px 0;
+}
+
+.singleProduct p{
+    margin:8px 0;
+}
