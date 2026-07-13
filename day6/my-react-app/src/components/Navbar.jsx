@@ -1,5 +1,10 @@
 import "./Navbar.css";
-function Navbar(){
+import useCart from "../hooks/useCart";
+import { Link } from "react-router-dom";
+function Navbar() {
+
+    const { cart } = useCart();
+
     return(
         <>
             <div className="toplinks">
@@ -177,7 +182,10 @@ function Navbar(){
                 <input type="text" placeholder="Search" />
                 <span>👤</span>
                 <span>❤</span>
-                <span>🛍</span>
+              <Link to="/cart">
+    <span>🛒</span>
+</Link>
+<span>{cart.length}</span>
             </div>
                 </nav>
             

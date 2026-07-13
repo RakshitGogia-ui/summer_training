@@ -2,10 +2,7 @@ import "./Products.css";
 import ProductCard from "./ProductCard";
 import Resultbar from "./Resultbar";
 
-import shoe1 from "../assets/shoe1.avif";
-import shoe2 from "../assets/shoe2.avif";
-import shoe3 from "../assets/shoe3.avif";
-import shoe4 from "../assets/shoe4.avif";
+
 import { useState, useEffect } from "react";
 
 function Products() {
@@ -37,23 +34,14 @@ const totalPages = Math.ceil(totalProducts / productsPerPage);
         <div className="products">
 
             {
-                products.map((item,index)=>{
-
-                    return(
-                        <ProductCard
-                        image={item.images[0]}
-                        price={item.price}
-                        title={item.title}
-                        category={item.category}
-                        brand={item.brand}
-                        rating={item.rating}
-                        discount={item.discountPercentage}
-/>
-
-                    )
-
-                })
-            }
+                products.map((item) => {
+  return (
+    <ProductCard
+      key={item.id}
+      product={item}
+    />
+  );
+})}
 
         </div>
         <div className="pagination">

@@ -1,14 +1,14 @@
 import "./ProductCard.css";
-
-function ProductCard(props){
-
+import useCart from "../hooks/useCart";
+function ProductCard({ product }) {
+const  { addToCart }  = useCart();
     return(
 
         <div className="productCard">
 
             <div className="imgBox">
 
-                <img src={props.image} />
+                <img src={product.images[0]} />
 
                 <span className="wishlist">♡</span>
 
@@ -16,16 +16,19 @@ function ProductCard(props){
 
             <div className="details">
 
-                <h4>{props.price}</h4>
+                <h4>${product.price}</h4>
 
-                <p>{props.title}</p>
+                <p>{product.title}</p>
 
-                <p>{props.category}</p>
+                <p>{product.category}</p>
+                <p>{product.brand}</p>
 
-                <p>{props.colors}</p>
+<p>⭐ {product.rating}</p>
 
-                <p>{props.offer}</p>
-
+<p>{product.discountPercentage}% OFF</p>
+<button onClick={() => addToCart(product)}>
+    Add to Cart
+</button>
             </div>
 
         </div>
