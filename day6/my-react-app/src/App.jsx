@@ -1,27 +1,41 @@
-import Navbar from './components/Navbar.jsx';
-import Hero from './components/hero.jsx';
-import Categories from './components/Categories.jsx'
+import { useState } from "react";
 
-import Products from './components/Products.jsx';
-import CategoryLinks from './components/CategoryLinks.jsx';
-import Membership from './components/Membership.jsx';
-import Footer from './components/Footer.jsx';
-import SingleProduct from "./components/SingleProduct";
-import Cart from "./components/Cart.jsx"
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Categories from "./components/Categories";
+import Products from "./components/Products";
+import CategoryLinks from "./components/CategoryLinks";
+import Membership from "./components/Membership";
+import Footer from "./components/Footer";
+import Cart from "./components/Cart";
+
 function App() {
-  return (<>
-    <Navbar/>
-    <Cart />
-    <Hero/>
-    <Categories/>
-    
-     <Products/>
-     <SingleProduct />
-     <CategoryLinks/>
-     <Membership/>
-     
-     <Footer/></>
+
+  const [page, setPage] = useState("home");
+
+  return (
+    <>
+      <Navbar setPage={setPage} />
+
+      {
+        page === "home" && (
+          <>
+            <Hero />
+            <Categories />
+            <Products />
+            <CategoryLinks />
+            <Membership />
+          </>
+        )
+      }
+
+      {
+        page === "cart" && <Cart />
+      }
+
+      <Footer />
+    </>
   );
 }
 
-export default App
+export default App;

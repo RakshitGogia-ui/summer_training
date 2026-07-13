@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import useCart from "../hooks/useCart";
-import { Link } from "react-router-dom";
-function Navbar() {
+
+function Navbar({ setPage })  {
 
     const { cart } = useCart();
 
@@ -15,7 +15,12 @@ function Navbar() {
                 <a href="#">log in</a>
             </div>
             <nav className="navbar"><div className="logo">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="adidas" />
+             <img
+  src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg"
+  alt="adidas"
+  onClick={() => setPage("home")}
+  style={{ cursor: "pointer" }}
+/>
             </div>
            <ul className="mainmenu">
 
@@ -182,9 +187,14 @@ function Navbar() {
                 <input type="text" placeholder="Search" />
                 <span>👤</span>
                 <span>❤</span>
-              <Link to="/cart">
-    <span>🛒</span>
-</Link>
+              
+    <span
+  style={{ cursor: "pointer" }}
+  onClick={() => setPage("cart")}
+>
+  🛒
+</span>
+
 <span>{cart.length}</span>
             </div>
                 </nav>
