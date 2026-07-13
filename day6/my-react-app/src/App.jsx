@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Hero from "./components/hero";
 import Categories from "./components/Categories";
 import Products from "./components/Products";
 import CategoryLinks from "./components/CategoryLinks";
