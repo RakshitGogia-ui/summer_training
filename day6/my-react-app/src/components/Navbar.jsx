@@ -1,9 +1,9 @@
 import "./Navbar.css";
-import useCart from "../hooks/useCart";
+import { useSelector } from "react-redux";
 
 function Navbar({ setPage })  {
 
-    const { cart } = useCart();
+    const cart = useSelector((state) => state.cart.cart);
 
     return(
         <>

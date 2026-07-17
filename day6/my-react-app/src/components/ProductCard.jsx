@@ -1,40 +1,37 @@
 import "./ProductCard.css";
-import useCart from "../hooks/useCart";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cart/cartSlice";
+
 function ProductCard({ product }) {
-const  { addToCart }  = useCart();
-    return(
+  const dispatch = useDispatch();
 
-        <div className="productCard">
+  return (
+    <div className="productCard">
+      <div className="imgBox">
+        <img src={product.images[0]} />
 
-            <div className="imgBox">
+        <span className="wishlist">♡</span>
+      </div>
 
-                <img src={product.images[0]} />
+      <div className="details">
+        <h4>${product.price}</h4>
 
-                <span className="wishlist">♡</span>
+        <p>{product.title}</p>
 
-            </div>
+        <p>{product.category}</p>
 
-            <div className="details">
+        <p>{product.brand}</p>
 
-                <h4>${product.price}</h4>
+        <p>⭐ {product.rating}</p>
 
-                <p>{product.title}</p>
+        <p>{product.discountPercentage}% OFF</p>
 
-                <p>{product.category}</p>
-                <p>{product.brand}</p>
-
-<p>⭐ {product.rating}</p>
-
-<p>{product.discountPercentage}% OFF</p>
-<button onClick={() => addToCart(product)}>
-    Add to Cart
-</button>
-            </div>
-
-        </div>
-
-    )
-
+        <button onClick={() => dispatch(addToCart(product))}>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default ProductCard;
